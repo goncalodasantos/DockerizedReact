@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+      
+  node:
+    build: ./node/.
+    command: yarn start
+    # command: yarn create react-app project
+    volumes:
+      - ./node/nodecode:/npmApp/project
+    ports:
+      - "3000:3000"
+    networks:
+      - local
+
+
+    
+networks:
+  local:
